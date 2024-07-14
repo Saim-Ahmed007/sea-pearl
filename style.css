@@ -4,14 +4,25 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: myFont;
+    src: url(Poxast-Regular.ttf);
+}
+
 /* header css start */
 nav{
     background-color: #28179C;
-    width: 70%;
+    max-width: 70%;
     margin: auto;
     height: 80px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+.nav-container{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .pearl-icon{
     width: 60px;
@@ -19,9 +30,11 @@ nav{
    
 }
 .pearl-text{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     color: white;
+    font-family: myFont;
+    margin-top: 5px;
     
 }
 ul li{
@@ -37,13 +50,16 @@ ul li a{
     font-weight: 500;
 }
 
+
+
 .header-description{
     text-align: center;
     margin-top: 50px;
 }
 .header-description h1{
-    font-size: 120px;
+    font-size: 100px;
     margin-bottom: 30px;
+    font-family: myFont;
 }
 .header-description p{
     font-size: 20px;
@@ -140,12 +156,13 @@ ul li a{
     height: 400px;
 }
 .about-sea-perl h3{
-    font-size: 50px;
+    font-size: 33px;
     line-height: 70px;
     font-weight: 500;
+    font-family: myFont;
 }
 .about-sea-perl p{
-    font-size: 18px;
+    font-size: 17px;
     line-height: 33px;
     font-weight: 400;
 }
@@ -155,11 +172,12 @@ ul li a{
     margin-bottom: 70px;
 }
 .our-features h4{
-    font-size: 40px;
+    font-size: 30px;
     line-height: 56px;
+    font-family: myFont;
 }
 .our-features p{
-    font-size: 18px;
+    font-size: 17px;
     line-height: 25px;
 }
 
@@ -206,9 +224,10 @@ ul li a{
     margin-bottom: 100px;
 }
 .pearlswap-container h3{
-    font-size: 40px;
+    font-size: 35px;
     line-height: 56px;
     font-weight: 400;
+    font-family: myFont;
 }
 .pearlswap-container p{
     font-size: 18px;
@@ -245,11 +264,12 @@ ul li a{
 }
 
 .roadmap-head{
-    font-size: 40px;
+    font-size: 33px;
     font-weight: 400;
     line-height: 56px;
     text-align: center;
     margin-bottom: 60px;
+    font-family: myFont;
 }
 
 .roadmap-container{
@@ -307,11 +327,12 @@ ul li a{
 }
 
 .our-tokenomics{
-    font-size: 40px;
+    font-size: 33px;
     line-height: 56px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 50px;
+    font-family: myFont;
 }
 .tokenomics-container{
     display: flex;
@@ -359,21 +380,23 @@ ul li a{
 }
 
 .partners{
-    font-size: 40px;
+    font-size: 33px;
     line-height: 56px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 40px;
+    font-family: myFont;
 }
 /* end of main css */
 
 /* start footer css */
 .miss-out{
-    font-size: 36px;
+    font-size: 33px;
     line-height: 50px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 50px;
+    font-family: myFont;
 }
 .footer-section{
     position: relative;
@@ -417,6 +440,126 @@ ul li a{
     line-height: 25px;
     font-weight: 700;
 }
+
+/* responsive css */
+
+@media(max-width : 530px){
+    
+    nav{
+        width: 100%;
+    }
+    nav ul li a{
+        display: none;
+    }
+    .header-description h1{
+        font-size: 40px;
+    }
+    .header-description p{
+        font-size: 16px;
+    }
+    .buy-now-section{
+        font-size: 18px;
+    }
+    .buy-now-body{
+        display: grid;
+        grid-template-columns: repeat(1 ,1fr);
+    }
+    .about-sea-perl{
+        flex-direction: column;
+    }
+    .about-sea-perl h3{
+        font-size: 25px;
+        text-align: center;
+    }
+    .about-sea-perl p{
+        font-size: 16px; 
+        margin-left: 5px; 
+    }
+    .our-features h4{
+        font-size: 25px;
+    }
+    .our-features p{
+        font-size: 15px;
+    }
+    .features-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin: auto;
+        margin-left: 60px;
+        margin-bottom: 50px;
+        
+    }
+    .pearlswap-container{
+        flex-direction: column;
+    }
+    .pearlswap-desc{
+        text-align: center;
+        margin-right: 25px;
+    }
+    .pearlswap-desc h3{
+        font-size: 25px;
+    }
+    .pearlswap-desc p{
+        font-size: 18px;
+    }
+    .btn-developing{
+        
+        margin-bottom: 20px;
+    }
+    .roadmap-head{
+        font-size: 25px;
+    }
+    .roadmap-section{
+       display: grid;
+       grid-template-columns: repeat(1 ,200px);
+       margin: auto;
+       margin-left: 65px;
+       margin-bottom: 50px;
+    }
+    .our-tokenomics{
+        font-size: 25px;
+    }
+    .tokenomics-container{
+        flex-direction: column;
+    }
+    .token-container img{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .more-token-info-container{
+        margin-left: 75px;
+    }
+    .partners{
+        font-size: 25px;
+    }
+    .partner-section{
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+    .partner-section img{
+        padding: 10px 0px;
+    }
+    .miss-out{
+        font-size: 25px;
+    }
+    .footer-section input{
+        width: 450px;
+    }
+    .footer-section button{
+        width: 100px;
+        position: absolute;
+        right: 25px;
+        border-radius: 100px;
+        font-size: 16px;
+    }
+    .footer-section p{
+        font-size: 18px;
+    }
+}
+
+
 
 
 
